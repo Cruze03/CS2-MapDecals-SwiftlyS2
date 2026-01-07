@@ -40,8 +40,8 @@ If this plugin has helped you or your community, please consider supporting its 
 
 ## 🎥 Preview
 
-[![Watch Preview Video](https://raw.githubusercontent.com/Cruze03/CS2-MapDecals-SwiftlyS2/main/.git-assets/mapdecal-preview1.png)](https://youtu.be/_wMVWcOAkM8)
-[![Watch Preview Video2](https://raw.githubusercontent.com/Cruze03/CS2-MapDecals-SwiftlyS2/main/.git-assets/mapdecal-preview2.png)](https://youtu.be/_wMVWcOAkM8)
+[![Watch Preview Video](https://raw.githubusercontent.com/Cruze03/CS2-MapDecals-SwiftlyS2/refs/heads/main/.git-assets/mapdecal_preview1.png)](https://youtu.be/_wMVWcOAkM8)
+[![Watch Preview Video2](https://raw.githubusercontent.com/Cruze03/CS2-MapDecals-SwiftlyS2/refs/heads/main/.git-assets/mapdecal_preview2.png)](https://youtu.be/_wMVWcOAkM8)
 
 ## ✨ Features
 
