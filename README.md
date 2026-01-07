@@ -94,7 +94,7 @@ You can use **any one** of the following databases:
 ---
 
 ## 👾 Known Issues
-[ ] Per player transmit doesn't seem to work. Will fix in future version.
+- [ ] Per player transmit doesn't seem to work. Will fix in future version.
 
 ## 🧠 Credits & Inspiration
 
