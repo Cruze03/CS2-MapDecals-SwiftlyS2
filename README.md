@@ -38,6 +38,11 @@ If this plugin has helped you or your community, please consider supporting its 
 
 ---
 
+## 🎥 Preview
+
+[![Watch Preview Video](https://raw.githubusercontent.com/Cruze03/CS2-MapDecals-SwiftlyS2/main/.git-assets/mapdecal-preview1.png)](https://youtu.be/_wMVWcOAkM8)
+[![Watch Preview Video2](https://raw.githubusercontent.com/Cruze03/CS2-MapDecals-SwiftlyS2/main/.git-assets/mapdecal-preview2.png)](https://youtu.be/_wMVWcOAkM8)
+
 ## ✨ Features
 
 - Place decals at predefined locations on maps
@@ -55,6 +60,8 @@ The plugin requires the following dependencies to function correctly:
 - **[SwiftlyS2 - v1.1.1-beta.38+](https://github.com/swiftly-solution/swiftlys2)** – Required core framework
 - **[Cookies](https://github.com/swiftly-solution/cookies)**  
   Used to store player preferences for toggling non-forced decals
+
+---
 
 ### Supported Databases
 
@@ -95,6 +102,8 @@ You can use **any one** of the following databases:
 
 ## 👾 Known Issues
 - [ ] Per player transmit doesn't seem to work. Will fix in future version.
+
+---
 
 ## 🧠 Credits & Inspiration
 
