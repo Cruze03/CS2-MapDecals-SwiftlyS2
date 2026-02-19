@@ -28,7 +28,7 @@
 		<PackageReference Include="Microsoft.Extensions.Logging" Version="*" ExcludeAssets="runtime" PrivateAssets="all" />
 		<PackageReference Include="MySqlConnector" Version="*" />
 		<PackageReference Include="Npgsql" Version="*" />
-    	<PackageReference Include="SwiftlyS2.CS2" Version="1.1.1-beta.38" ExcludeAssets="runtime" PrivateAssets="all" />
+    	<PackageReference Include="SwiftlyS2.CS2" Version="1.1.5-beta.57" ExcludeAssets="runtime" PrivateAssets="all" />
 		<None Update="resources\**\*.*" CopyToOutputDirectory="PreserveNewest" />
 
 		<Reference Include="Cookies.Contract">

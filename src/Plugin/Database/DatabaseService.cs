@@ -31,8 +31,7 @@ public sealed partial class Plugin
             try
             {
                 // Run FluentMigrator migrations
-                using var connection = Core.Database.GetConnection(_connectionName);
-                MigrationRunner.RunMigrations(connection);
+                MigrationRunner.RunMigrations(Core.Database, _connectionName);
 
                 IsEnabled = true;
 

@@ -1,9 +1,6 @@
-using System.Data;
 using FluentMigrator.Runner;
-using Microsoft.Data.Sqlite;
 using Microsoft.Extensions.DependencyInjection;
-using MySqlConnector;
-using Npgsql;
+using SwiftlyS2.Shared.Database;
 
 namespace MapDecals.Database.Migrations;
 
@@ -17,13 +14,16 @@ public static class MigrationRunner
     /// Run all pending migrations
     /// </summary>
     /// <param name="dbConnection">Database connection</param>
-    public static void RunMigrations(IDbConnection dbConnection)
+    public static void RunMigrations(IDatabaseService dbService, string connectionName)
     {
+        using var dbConnection = dbService.GetConnection(connectionName);
+        var protocol = dbService.GetConnectionInfo(connectionName).Driver;
+
         var serviceProvider = new ServiceCollection()
             .AddFluentMigratorCore()
             .ConfigureRunner(rb =>
             {
-                ConfigureDatabase(rb, dbConnection);
+                ConfigureDatabase(rb, protocol, dbConnection.ConnectionString);
                 rb.ScanIn(typeof(MigrationRunner).Assembly).For.Migrations();
             })
             .AddLogging(lb => lb.AddFluentMigratorConsole())
@@ -37,23 +37,23 @@ public static class MigrationRunner
     /// <summary>
     /// Configure the FluentMigrator runner for the appropriate database type
     /// </summary>
-    private static void ConfigureDatabase(IMigrationRunnerBuilder rb, IDbConnection dbConnection)
+    private static void ConfigureDatabase(IMigrationRunnerBuilder rb, string dbConnectionDriver, string connectionString)
     {
-        switch (dbConnection)
+        switch (dbConnectionDriver)
         {
-            case MySqlConnection:
+            case "mysql":
                 rb.AddMySql5();
                 break;
-            case NpgsqlConnection:
+            case "postgresql":
                 rb.AddPostgres();
                 break;
-            case System.Data.SQLite.SQLiteConnection:
+            case "sqlite":
                 rb.AddSQLite();
                 break;
             default:
-                throw new NotSupportedException($"Unsupported database connection type: {dbConnection.GetType().Name}");
+                throw new NotSupportedException($"Unsupported database connection type: {dbConnectionDriver}");
         }
 
-        rb.WithGlobalConnectionString(dbConnection.ConnectionString);
+        rb.WithGlobalConnectionString(connectionString);
     }
 }
