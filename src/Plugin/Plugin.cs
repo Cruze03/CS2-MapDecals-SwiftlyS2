@@ -14,8 +14,8 @@ namespace MapDecals;
     Version = "1.0.1",
     Name = "Map Decals",
     Author = "Cruze",
-    Description = "Place map decals inside map"//,
-                                               // MinimumAPIVersion = "1.1.5-beta55"
+    Description = "Place map decals inside map"
+// MinimumAPIVersion = "1.1.5-beta55"
 )]
 public sealed partial class Plugin(ISwiftlyCore core) : BasePlugin(core)
 {
