@@ -303,7 +303,10 @@ public sealed partial class Plugin
     {
         if (PlayerCookiesAPIv1 == null) return;
 
-        PlayerCookiesAPIv1.Load(player);
+        Task.Run(async () =>
+        {
+            await PlayerCookiesAPIv1.Load(player);
+        });
 
         if (!PlayerCookiesAPIv1.Has(player, MapDecalCookieKey))
         {

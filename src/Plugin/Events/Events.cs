@@ -101,8 +101,11 @@ public sealed partial class Plugin
         if (_adDecalStatus.TryGetValue(player.PlayerID, out var status))
         {
             PlayerCookiesAPIv1.Set(player, MapDecalCookieKey, status);
-            PlayerCookiesAPIv1.Save(player);
-            _adDecalStatus.Remove(player.PlayerID);
+            Task.Run(async () =>
+            {
+                await PlayerCookiesAPIv1.Save(player);
+                _adDecalStatus.Remove(player.PlayerID);
+            });
         }
 
         return HookResult.Continue;
