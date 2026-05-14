@@ -24,7 +24,7 @@ public sealed class PluginConfig
         new() { UniqId = "exampleTexture2", Name = "Example Name 2", Material = "materials/Example/exampleTexture2.vmat", ShowPermission = ""},
     };
 
-    public CommandConfig AdToggleCommands = new()
+    public CommandConfig AdToggleCommands { get; set; } = new()
     {
         Command = "decal",
         Aliases = [
@@ -33,7 +33,7 @@ public sealed class PluginConfig
         Permission = "cc-mapdecals.vip"
     };
 
-    public CommandConfig PlaceDecalCommands = new()
+    public CommandConfig PlaceDecalCommands { get; set; } = new()
     {
         Command = "mapdecal",
         Aliases = [
