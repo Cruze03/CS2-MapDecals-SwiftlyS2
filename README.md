@@ -58,7 +58,7 @@ If this plugin has helped you or your community, please consider supporting its 
 The plugin requires the following dependencies to function correctly:
 
 - **[SwiftlyS2 - v1.1.1-beta.38+](https://github.com/swiftly-solution/swiftlys2)** – Required core framework
-- **[Cookies](https://github.com/swiftly-solution/cookies)**  
+- **[Cookies](https://github.com/swiftlys2-plugins/cookies)**  
   Used to store player preferences for toggling non-forced decals
 
 ---
